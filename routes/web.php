@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/saludo/{id}',function ($id) {
+    echo "Hola ".$id.", que texngas un excelente día";
+});
+
+
+Route::get('/inicio', function () {
+     return view('login');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
